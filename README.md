@@ -14,11 +14,27 @@ let name: String = "Theodore Roosevelt"
 ```
 * Explain that a *dictionary* stores associations between keys of the same type and values of the same type in a collection with no defined ordering (from apple doc.).
 * Explain why they are using a dictionary. You use a dictionary when you need to look up values based on their identifier similar to how yo use a real-word dictionary to look up the definition for a particular word.
+* The outline/notes below cover a LOT - reference that for what the student should see.
 
 ## What the student can do at this point 
 
-* More stuff
-
+* Create variables and constants
+* Is familiar with type annotations, type inference and string interpolation.
+* Can create functions with return types.
+* Is familiar with the String, Int, Double, and Bool type.
+* Can perform arithmetic operations on Int and Double.
+* Understands if and else clause statements.
+* Can create and use Arrays.
+* Can iterate over an Array using a for-in loop.
+* Can iterate over an Array calling enumerate().
+* Work with the following methods on arrays:
+	* append()
+	* insert(_:atIndex:)
+	* removeAtIndex()
+	* subscript syntax with arrays
+	* count
+	* isEmpty
+* Had just learned about Optionals!
 ## Outline / Notes
 
 *  In defining what the dictionary is to the student, it's important to give them the WHY? and include cone snippets or even pseudocode as to what problem they are solving by using dictionaries. 
@@ -159,6 +175,8 @@ myFavoriteWords["LA DI DA"] = "pretentious or snobbish, especially in manner or 
 ```swift
 myFavoriteWords["LA DI DA"] = nil
 ```
+
+* **NOTE** We should tell them that a dictionary is **NOT** ordered but.. I'm unsure if we should bring that up here. In the next reading, we're set to talk about iterating over a dictionary which is where they will need to know thats the case. **PERSON WRITING THIS**: What do you think?
 
 * You did it!
 
