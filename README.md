@@ -78,7 +78,94 @@ var myFavoriteWords = ["Rigmarole": "a lenghty and complicated procedure", "Gobb
 ![dance](https://media.giphy.com/media/xT1XGHkP7hqm0JvWrS/giphy.gif)
 
 * But, how do we use this thing we just made?
-* Think of the `myFavoriteWords` variable as a real-world dictionary. Our keys are represented by the following 
+* Think of the `myFavoriteWords` variable as a real-world dictionary. Our keys are represented by the following:
+	* "Rigmarole"
+	* "Gobbledygook"
+	* "Lollygag"
+	* "Wabbit"
+* With these keys in hand, we can take a key... plug it into our dictionary and get back the definition. So how do we do this?
+
+```swift
+let definition = myFavoriteWords["Rigmarole"]
+```
+
+* Here... we are taking the "Rigmarole" key and plugging it into our `myFavoriteWords` variable using again a syntax that looks somewhat like we're trying to make an `Array`, but we're NOT.
+* If we were to option click the `definition` variable, what do you expect we will see?
+
+![optionalDefinition](http://i.imgur.com/woJfETt.png?1)  
+* But I thought the Value was of type `String`, why is it coming back as an optional String? (`String?`)
+
+
+![confused](https://media.giphy.com/media/3oEjHChKVxgKFLM2ty/giphy.gif)  
+
+* Well... before we dive into that, what if we tried doing something like this.
+
+```swift
+let laDiDaDefinition = myFavoriteWords["LA DI DA"]
+```
+* Is "LA DI DA" a valid key here? What is the type of `laDiDaDefinition` here...?
+
+![la di da](http://i.imgur.com/Ur34J9t.png?1)
+
+* It's also of type `String?` (optional String). Can you see **why** this is the case now?
+* If we made an attempt to use a Key that wasn't valid (like above) then the `laDiDaDefinition` variable would be `nil` because there was no value to return.
+* The `definition` variable above was created using a valid Key, so the value returned is a `String?` as well... BUT in unwrapping it.. we would be met with a `String` value and NOT `nil`. In unwrapping the `laDiDaDefinition` variable, we would be met with `nil`.
+
+```swift
+let definition = myFavoriteWords["Rigmarole"]
+if let definition = definition {
+    print("The definition of the word Rigmarole: \(definition)")
+} else {
+    print("Rigmarole is undefined.")
+}
+
+// prints "The definition of the word Rigmarole: a lenghty and complicated procedure"
+
+
+let laDiDaDefinition = myFavoriteWords["LA DI DA"]
+if let laDiFrigginDAA = laDiDaDefinition {
+    print("The definition of the word LA DI DA: \(laDiFrigginDAA)")
+} else {
+    print("LA DI DA is undefined.")
+}
+
+// prints "LA DI DA is undefined."
+```
+
+* Compare that with trying to print those variables WITHOUT unwrapping them:
+
+```swift
+let definition = myFavoriteWords["Rigmarole"]
+
+print(definition)
+// prints "Optional("a lenghty and complicated procedure")"
+
+
+
+let laDiDaDefinition = myFavoriteWords["LA DI DA"]
+
+print(laDiDaDefinition)
+// prints "nil"
+```
+
+* Using the same style as above, posing the problem at hand then solving it alongside with the student, I want to introduce the following as well.. what if we now wanted to add this la di da to our dictionary and give it a definition (value):
+
+```swift
+myFavoriteWords["LA DI DA"] = "pretentious or snobbish, especially in manner or speech"
+```
+
+* Of if we hear back from our editor that la di da is a word he/she NO LONGER WANTS!! how can we get rid of it now from our dictionary:
+
+```swift
+myFavoriteWords["LA DI DA"] = nil
+```
+
+* You did it!
+
+![congrats](https://media.giphy.com/media/7rj2ZgttvgomY/giphy.gif)
+
+
+
 
 
 
