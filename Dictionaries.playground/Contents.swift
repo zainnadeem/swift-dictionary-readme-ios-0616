@@ -28,3 +28,6 @@ definition = favoriteWords["strategery"]
 
 favoriteWords["strategery"] = nil
 print(favoriteWords)
+
+//Say later on, a friend points out that "strategery" isn't really a word, so it definitely can't be a favorite word, so you decide to remove it from the dictionary. Removing a key from a dictionary is pretty easy: Just assign that key the nil value.
+
